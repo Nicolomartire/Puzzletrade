@@ -1,0 +1,28 @@
+{
+  "name": "puzzletrade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolomartire/Puzzletrade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolomartire/Puzzletrade/issues"
+  },
+  "homepage": "https://github.com/Nicolomartire/Puzzletrade#readme",
+  "dependencies": {
+    "next": "^12.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "save": "^2.9.0"
+  }
+}
