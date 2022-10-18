@@ -1,8 +1,8 @@
-function Trade() {
+function User() {
   return (
     <div>
-      <h1>Trade page</h1>
+      <h1>User page</h1>
     </div>
   )
 }
-export default Trade
+export default User
