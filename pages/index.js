@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import FooterNav from "../components/footerNav"
 
 function HomePage() {
@@ -18,5 +19,13 @@ function HomePage() {
       </footer>
     </div >
   )
+=======
+function Page() {
+    return (
+        <div>
+            <h1>Hello Worlds</h1>
+        </div>
+    );
+>>>>>>> 54bb67db93568e8e594a06c7b03d231c5243f2d6
 }
 export default HomePage
