@@ -11,16 +11,18 @@ datasource db {
 }
 
 model User1 {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   firstname String
   lastname  String
-  email     String   @unique
+  email     String    @unique
   city      String
+  piece     String
+  genre     String?
   pusselref Puzzle1[]
 }
 
 model Puzzle1 {
-  id         Int    @id @default(autoincrement())
+  id         Int     @id @default(autoincrement())
   namnpuzzle String
   descripton String?
   pieces     Int
