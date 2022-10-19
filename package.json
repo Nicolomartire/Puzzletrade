@@ -20,10 +20,14 @@
   },
   "homepage": "https://github.com/Nicolomartire/Puzzletrade#readme",
   "dependencies": {
+    "@prisma/client": "^4.5.0",
     "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "prisma": "^4.5.0"
   }
 }
