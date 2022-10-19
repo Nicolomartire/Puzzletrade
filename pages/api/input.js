@@ -13,11 +13,9 @@ export default async function handler(req, res) {
 			lastname: body.lastName,
 			email: body.email,
 			city: body.city,
-			/*   namnpuzzle: body.namnpuzzle,
-        description: body.description,
-        pieces: body.pieces,
-        condition: body.condition */
-			/* picture: body.Picture, */
+			piece: body.piece,
+			genre: body.genre
+
 		},
 	});
 
