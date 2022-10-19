@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: white;
@@ -45,4 +53,45 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
+}
+
+.wrapper {
+  margin-top: 40px;
+}
+
+.TopNavBar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.homeTNB, .tradeTNB, .userTNB {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 54px;
+  border-radius: 10%;
+  text-decoration: none;
+  background-image: url(./img/puzzle.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-size: small;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTNB {
+  color: white;
+  text-decoration: none;
+  font-size: x-small;
+}
+
+.titelPages {
+  margin-top: 50px;
 }/*# sourceMappingURL=styles.css.map */

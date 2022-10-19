@@ -1,7 +1,7 @@
 function Trade() {
   return (
     <div>
-      <h1>Trade page</h1>
+      <h1 className="titelPages">Trade page</h1>
     </div>
   )
 }

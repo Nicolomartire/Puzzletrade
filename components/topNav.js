@@ -3,17 +3,19 @@ import Link from "next/link";
 const Nav = () => {
     return (
         <>
-            <nav className="TopNavBar">
-                <Link href='/' className="homeTNB, navelements">
-                    <a>Home</a>
-                </Link>
-                <Link href='/trade' className="tradeTNB, navelements">
-                    <a>Trade</a>
-                </Link>
-                <Link href='/user' className="userTNB, navelements">
-                    <a>User</a>
-                </Link>
-            </nav>
+            <header className="header">
+                <nav className="TopNavBar">
+                    <Link href='/'>
+                        <a className="homeTNB">Home</a>
+                    </Link>
+                    <Link href='/trade'>
+                        <a className="tradeTNB">Trade</a>
+                    </Link>
+                    <Link href='/user'>
+                        <a className="userTNB">User</a>
+                    </Link>
+                </nav>
+            </header>
         </>
     )
 }

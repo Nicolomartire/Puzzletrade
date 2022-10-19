@@ -2,12 +2,13 @@ import Link from "next/link";
 
 const FooterNav = () => {
     return (
-
-        <footer>
-            <Link href='/about' className="aboutTNB, navelements">
-                <a>About</a>
-            </Link>
-        </footer>
+        <>
+            <footer className="footer">
+                <Link href='/about'>
+                    <a className="aboutTNB">About us</a>
+                </Link>
+            </footer>
+        </>
     )
 }
 
