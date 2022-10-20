@@ -15,11 +15,9 @@ export default async function handler(req, res) {
 			city: body.city,
 			piece: body.piece,
 			genre: body.genre
-
 		},
 	});
 
-	/*   */
 	res.status(200).json(newUser, { sucess: true });
 	console.warn("Sucessfully created use:", newUser);
 }
