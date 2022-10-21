@@ -69,7 +69,7 @@ export default function Page() {
 		let res = null;
 
 		try {
-			const response = await fetch(`/api/search/${search}?type=puzzle`);
+			const response = await fetch(`/api/search/${search}?type=puzzle&field=pieces`);
 
 			if (!response.ok) {
 				throw new Error("something went wrong");
@@ -94,11 +94,6 @@ export default function Page() {
 		setGenre("");
 	};
 
-	const formatUsersCity = (users) => users.map((u) => u.city);
-
-	const formatUsersPiece = (users) => users.map((u) => u.piece);
-
-	console.log('search', searchType)
 	return (
 		<>
 			<div className="wrapper">

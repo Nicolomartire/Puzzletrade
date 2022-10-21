@@ -2,36 +2,33 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+// http://localhost:3000/api/search/100?type=puzzle&field=pieces
+// http://localhost:3000/api/search/Stockh?type=puzzle&field=city
+// http://localhost:3000/api/search/Stockh?type=user&field=city
+
 export default async function handler(req, res) {
-	const {value, type = 'user'} = req.query
+	const {value = '', type = '', field = ''} = req.query
 
-	// const id = req.query.id;
-
-	// const puzzles = await prisma.puzzle1.delete({
-	// 	where: {
-	// 		id: id
-	// 	}
-	// })
-
-	const queryType = {
+	const table = {
 		'user': 'user1',
 		'puzzle': 'puzzle1',
-	}[type]
+	}[type] || 'user1'
 
-	const searchType = {
-		'user': 'city',
-		'puzzle': 'pieces',
-	}[type]
+	const searchField = {
+		'city': 'city',
+		'pieces': 'pieces',
+		// Need more search fields? Add them here
+	}[field] || 'city'
 
-	const searchObj = type === 'puzzle' ? {
-		gte: Number(value)
-	} : {
+	const searchObj = isNaN(value) ? {
 		startsWith: value,
+	} : {
+		gte: Number(value)
 	}
 
-	const result = await prisma[queryType].findMany({
+	const result = await prisma[table].findMany({
 		where: {
-			[searchType]: {
+			[searchField]: {
 				...searchObj
 			},
 		},
