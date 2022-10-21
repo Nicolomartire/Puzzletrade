@@ -1,6 +1,9 @@
 // import { prisma } from "@prisma/client";
 import { useEffect, useState } from "react";
 import Card from 'components/Card'
+import CardPuzzle from "components/CardPuzzle"
+import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
+
 
 export default function Page() {
 	const [firstName, setFirstName] = useState("");
@@ -21,6 +24,9 @@ export default function Page() {
 		console.log("city", city);
 		console.log("APIReponse", APIResponse);
 	}, [firstName, lastName, email, city, APIResponse]);
+
+
+
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -194,19 +200,21 @@ export default function Page() {
 				{/* Orter */}
 				{APIResponse && APIResponse.result.map((item, i) =>  
 					searchType === 'user' ? (
-						<Card key={i} firstname={item.firstname} lastname={item.lastname} email={item.email} />
+						<Card key={i} firstname={item.firstname} lastname={item.lastname} email={item.email} city={item.city}/>
 					) : (
-					<div key={i}>
+						<CardPuzzle key={i} namnpuzzle={item.namnpuzzle} pieces={item.pieces} description={item.description}/>
+
+/* 					<div key={i}>
 						<p>{item.namnpuzzle}</p>
 						<p>{item.description}</p>
 						<p>{item.pieces}</p>
 						<p>{item.picture}</p>
 						<p>{item.author}</p>
-					</div>
+						<img src="./images.jpeg" alt="Bild på pussel"></img>
+					</div> */
 					))}
 
-				{/* Pieces */}
-				{/* {APIResponse && formatUsersCity(APIResponse.users).map((user, i) => <p key={i}>{user}</p>)} */}
+		
 			</div>
 		</>
 	);

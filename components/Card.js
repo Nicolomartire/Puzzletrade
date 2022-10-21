@@ -1,11 +1,11 @@
 
 const Card = (props) => {
-    const {firstname, lastname, email} = props
+    const {firstname, lastname, email,city} = props
 
     return (
         <div className="card">
-            <p>{email}</p>
-            <span>{firstname} {lastname}</span>
+            <p>{firstname} {lastname} {email}</p>
+            <span> {city}</span>
         </div>
     )
 }
