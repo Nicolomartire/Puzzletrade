@@ -98,7 +98,7 @@ export default function Page() {
 
 	const formatUsersPiece = (users) => users.map((u) => u.piece);
 
-	console.log('searc', searchType)
+	console.log('search', searchType)
 	return (
 		<>
 			<div className="wrapper">
